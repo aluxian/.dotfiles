@@ -1,0 +1,7 @@
+[advice]
+	statusHints = false
+[push]
+	default = current
+[user]
+	name = Alexandru Rosianu
+	email = me@aluxian.com
