@@ -1,8 +1,13 @@
+# vim:fileencoding=utf-8:ft=conf:foldmethod=marker
+
+# Archey init {{{
+
 # show Apple logo
 (archey --offline &)
 
-# brew
-eval $(brew shellenv)
+# }}}
+
+# $PATH config {{{
 
 # ruby
 export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/2.6.0/bin/:$PATH"
@@ -13,12 +18,35 @@ export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 # sqlite
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 
-# Zplugin
+# golang
+export GOPATH="$HOME/.go"
+export PATH="$GOPATH/bin:$PATH"
+
+# Android
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export PATH="$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/tools:$PATH"
+
+# Visual Studio Code
+export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
+
+# }}}
+
+# Homebrew init {{{
+
+eval $(brew shellenv)
+
+# }}}
+
+# Zplugin init {{{
+
 source "$HOME/.zplugin/bin/zplugin.zsh"
 autoload -Uz _zplugin
 (( ${+_comps} )) && _comps[zplugin]=_zplugin
 
-# plugins
+# }}}
+
+# Zplugin plugins {{{
+
 zplugin ice lucid
 zplugin light willghatch/zsh-saneopt
 
@@ -124,8 +152,12 @@ zplugin snippet OMZ::plugins/adb/_adb
 zplugin ice wait'3' lucid
 zplugin light lukechilds/zsh-nvm
 
-zplugin ice wait'3' lucid
-zplugin snippet OMZ::plugins/lol/lol.plugin.zsh
+zplugin ice lucid
+zplugin light onyxraven/zsh-osx-keychain
+
+# }}}
+
+# Zsh init {{{
 
 # use emacs mode editing
 bindkey -e
@@ -135,3 +167,29 @@ bindkey "^[[3~" delete-char
 
 # configure zsh
 setopt share_history histignorealldups histignorespace
+
+# zsh
+export HISTSIZE=100000
+export SAVEHIST=100000
+
+# }}}
+
+# Misc env vars {{{
+
+# ls
+export CLICOLOR=1
+
+# neovim
+export EDITOR=nvim
+
+# gnupg
+export GPG_TTY=`tty`
+
+# }}}
+
+# Secrets (env vars) {{{
+
+# cloudconvert-cli (installed with npm -g)
+export CLOUDCONVERT_API_KEY=$(keychain-environment-variable CLOUDCONVERT_API_KEY)
+
+# }}}
