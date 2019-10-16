@@ -89,7 +89,8 @@ augroup END
 
 " Neomake {{{
 
-let g:neomake_python_enabled_makers = ['pylint']
+let g:neomake_python_enabled_makers = ['pylint', 'mypy']
+let g:neomake_javascript_enabled_makers = ['tslint', 'eslint']
 
 " }}}
 

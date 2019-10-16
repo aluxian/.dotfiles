@@ -47,14 +47,17 @@ autoload -Uz _zplugin
 
 # Zplugin plugins {{{
 
+# pretty, minimal and fast ZSH prompt
 zplugin ice pick'async.zsh' src'pure.zsh'
 zplugin light sindresorhus/pure
 
-zplugin ice atclone'dircolors -b LS_COLORS > clrs.zsh' atpull'%atclone' pick'clrs.zsh' nocompile'!' atload'zstyle ':completion:*' list-colors “${(s.:.)LS_COLORS}”'
+# a collection of LS_COLORS definitions
+zplugin ice atclone"dircolors -b LS_COLORS > c.zsh" atpull'%atclone' pick"c.zsh"
 zplugin light trapd00r/LS_COLORS
 
+# keychain utilities for reading/writing secure environment vars
 zplugin ice lucid
-zplugin light 'chrissicool/zsh-256color'
+zplugin light onyxraven/zsh-osx-keychain
 
 zplugin ice wait'0' lucid blockf
 zplugin light zsh-users/zsh-completions
@@ -148,9 +151,6 @@ zplugin snippet OMZ::plugins/adb/_adb
 
 zplugin ice wait'3' lucid
 zplugin light lukechilds/zsh-nvm
-
-zplugin ice lucid
-zplugin light onyxraven/zsh-osx-keychain
 
 # }}}
 
