@@ -12,9 +12,6 @@
 # ruby
 export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/2.6.0/bin/:$PATH"
 
-# python
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
-
 # sqlite
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 
@@ -95,7 +92,7 @@ zplugin light zdharma/zsh-diff-so-fancy
 zplugin ice wait'2' lucid blockf
 zplugin snippet OMZ::plugins/fzf/fzf.plugin.zsh
 
-zplugin ice wait'2' lucid blockf
+zplugin ice wait'2' lucid
 zplugin snippet OMZ::plugins/brew/brew.plugin.zsh
 
 zplugin ice wait'2' lucid blockf
@@ -106,6 +103,9 @@ zplugin snippet OMZ::plugins/gitignore/gitignore.plugin.zsh
 
 zplugin ice wait'2' lucid atload'!ZSH_TMUX_FIXTERM=false'
 zplugin snippet OMZ::plugins/tmux/tmux.plugin.zsh
+
+zplugin ice wait'2' lucid
+zplugin snippet OMZ::plugins/pyenv/pyenv.plugin.zsh
 
 zplugin ice wait'2' lucid
 zplugin snippet OMZ::plugins/dash/dash.plugin.zsh
