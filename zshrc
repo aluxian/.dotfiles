@@ -126,6 +126,9 @@ zplugin ice wait"2" lucid
 zplugin snippet OMZ::plugins/gradle/gradle.plugin.zsh
 
 zplugin ice wait'2' lucid
+zplugin snippet OMZ::plugins/dotenv/dotenv.plugin.zsh
+
+zplugin ice wait'2' lucid
 zplugin snippet OMZ::plugins/transfer/transfer.plugin.zsh
 
 zplugin ice wait'2' lucid
