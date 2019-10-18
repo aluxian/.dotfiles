@@ -42,6 +42,8 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'tyru/open-browser.vim'
   Plug 'weirongxu/plantuml-previewer.vim'
 
+  Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+
 call plug#end()
 
 " }}}
