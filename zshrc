@@ -46,21 +46,21 @@ autoload -Uz _zplugin
 
 # pretty, minimal and fast ZSH prompt
 zplugin ice pick'async.zsh' src'pure.zsh'
-zplugin light sindresorhus/pure
+zplugin load sindresorhus/pure
 
 # a collection of LS_COLORS definitions
-zplugin ice atclone"dircolors -b LS_COLORS > c.zsh" atpull'%atclone' pick"c.zsh"
-zplugin light trapd00r/LS_COLORS
+zplugin ice atclone'dircolors -b LS_COLORS > c.zsh' atpull'%atclone' pick'c.zsh'
+zplugin load trapd00r/LS_COLORS
 
 # keychain utilities for reading/writing secure environment vars
 zplugin ice lucid
-zplugin light onyxraven/zsh-osx-keychain
+zplugin load onyxraven/zsh-osx-keychain
 
 zplugin ice wait'0' lucid blockf
-zplugin light zsh-users/zsh-completions
+zplugin load zsh-users/zsh-completions
 
 zplugin ice wait'0' lucid atinit'ZPLGM[COMPINIT_OPTS]=-C; zpcompinit; zpcdreplay'
-zplugin light zdharma/fast-syntax-highlighting
+zplugin load zdharma/fast-syntax-highlighting
 
 zplugin ice wait'0' lucid atload'!_zsh_autosuggest_start'
 zplugin load zsh-users/zsh-autosuggestions
@@ -69,25 +69,25 @@ zplugin ice wait'0' lucid
 zplugin snippet OMZ::plugins/git/git.plugin.zsh
 
 zplugin ice wait'1' lucid
-zplugin light b4b4r07/enhancd
+zplugin load b4b4r07/enhancd
 
 zplugin ice wait'1' lucid
-zplugin light mafredri/zsh-async
+zplugin load mafredri/zsh-async
 
 zplugin ice wait'1' lucid
-zplugin light MichaelAquilina/zsh-you-should-use
+zplugin load MichaelAquilina/zsh-you-should-use
 
 zplugin ice wait'1' lucid
 zplugin snippet OMZ::plugins/common-aliases/common-aliases.plugin.zsh
 
 zplugin ice wait'1' lucid pick'manydots-magic' compile'manydots-magic'
-zplugin light knu/zsh-manydots-magic
+zplugin load knu/zsh-manydots-magic
 
 zplugin ice wait'1' lucid
-zplugin light supercrabtree/k
+zplugin load supercrabtree/k
 
 zplugin ice wait'2' lucid as'program' pick'bin/git-dsf'
-zplugin light zdharma/zsh-diff-so-fancy
+zplugin load zdharma/zsh-diff-so-fancy
 
 zplugin ice wait'2' lucid blockf
 zplugin snippet OMZ::plugins/fzf/fzf.plugin.zsh
@@ -120,9 +120,6 @@ zplugin ice wait'2' lucid
 zplugin snippet OMZ::plugins/sudo/sudo.plugin.zsh
 
 zplugin ice wait'2' lucid
-zplugin snippet OMZ::plugins/npx/npx.plugin.zsh
-
-zplugin ice wait"2" lucid 
 zplugin snippet OMZ::plugins/gradle/gradle.plugin.zsh
 
 zplugin ice wait'2' lucid
@@ -135,25 +132,28 @@ zplugin ice wait'2' lucid
 zplugin snippet OMZ::plugins/colored-man-pages/colored-man-pages.plugin.zsh
 
 zplugin ice wait'2' lucid
-zplugin light lukechilds/zsh-better-npm-completion
+zplugin load lukechilds/zsh-better-npm-completion
 
-zplugin ice wait'2' lucid as'program' pick"$ZPFX/bin/git-now" make"prefix=$ZPFX install"
-zplugin light iwata/git-now
+zplugin ice wait'2' lucid as'program' pick'$ZPFX/bin/git-now' make'prefix=$ZPFX install'
+zplugin load iwata/git-now
 
-zplugin ice wait'2' lucid as'program' pick"$ZPFX/bin/git-alias" make"PREFIX=$ZPFX" nocompile
-zplugin light tj/git-extras
+zplugin ice wait'2' lucid as'program' pick'$ZPFX/bin/git-alias' make'PREFIX=$ZPFX' nocompile
+zplugin load tj/git-extras
 
-zplugin ice wait'2' lucid as'program' atclone"perl Makefile.PL PREFIX=$ZPFX" atpull'%atclone' make'install' pick"$ZPFX/bin/git-cal"
-zplugin light k4rthik/git-cal
+zplugin ice wait'2' lucid as'program' atclone'perl Makefile.PL PREFIX=$ZPFX' atpull'%atclone' make'install' pick'$ZPFX/bin/git-cal'
+zplugin load k4rthik/git-cal
 
 zplugin ice wait'2' lucid as'command'
-zplugin light paulirish/git-open
+zplugin load paulirish/git-open
 
-zplugin ice wait'3' as'completion' lucid blockf
+zplugin ice wait'3' lucid as'completion' blockf
 zplugin snippet OMZ::plugins/adb/_adb
 
+zplugin ice wait'3' lucid as'program' pick'$ZPFX/ddcctl' make'ddcctl PREFIX=$ZPFX'
+zplugin load kfix/ddcctl
+
 zplugin ice wait'3' lucid
-zplugin light lukechilds/zsh-nvm
+zplugin load lukechilds/zsh-nvm
 
 # }}}
 
