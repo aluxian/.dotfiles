@@ -124,7 +124,6 @@ colorscheme material
 " vim ui
 set cursorline      " highlight current line
 set noshowmode      " hide mode at the bottom (replaced by statusline)
-set termguicolors
 
 " vim per-project config
 set exrc
