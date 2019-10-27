@@ -1,12 +1,5 @@
 # vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 
-# Archey init {{{
-
-# show Apple logo
-(archey --offline &)
-
-# }}}
-
 # $PATH config {{{
 
 # ruby
@@ -28,12 +21,6 @@ export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PA
 
 # }}}
 
-# Homebrew init {{{
-
-eval $(brew shellenv)
-
-# }}}
-
 # Zplugin init {{{
 
 source "$HOME/.zplugin/bin/zplugin.zsh"
@@ -43,6 +30,10 @@ autoload -Uz _zplugin
 # }}}
 
 # Zplugin plugins {{{
+
+# system information tool
+zplugin ice pick'bin/archey' as'program' atload'archey --offline'
+zplugin load obihann/archey-osx
 
 # pretty, minimal and fast ZSH prompt
 zplugin ice pick'async.zsh' src'pure.zsh'
@@ -67,6 +58,9 @@ zplugin load zsh-users/zsh-autosuggestions
 
 zplugin ice wait'0' lucid
 zplugin snippet OMZ::plugins/git/git.plugin.zsh
+
+zplugin ice wait'1' lucid atpull'ruby -e install' atload'!eval $(brew shellenv)'
+zplugin load Homebrew/install
 
 zplugin ice wait'1' lucid
 zplugin load b4b4r07/enhancd
