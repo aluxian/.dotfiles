@@ -16,7 +16,7 @@
         },
         "rules": [
           {
-            "description": "Launch apps by right shift + letters",
+            "description": "Launch apps using right shift + letter",
             "manipulators": [
               {
                 "from": {
@@ -28,7 +28,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "open '/Applications/Utilities/Activity Monitor.app'"
+                    "shell_command": "open -a 'Activity Monitor.app'"
                   }
                 ],
                 "type": "basic"
@@ -43,7 +43,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "open '/Applications/Android Studio.app'"
+                    "shell_command": "open -a 'Android Studio.app'"
                   }
                 ],
                 "type": "basic"
@@ -58,7 +58,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "open '/Applications/Mail.app'"
+                    "shell_command": "open -a Mail.app"
                   }
                 ],
                 "type": "basic"
@@ -73,7 +73,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "open '/Applications/Slack.app'"
+                    "shell_command": "open -a Slack.app"
                   }
                 ],
                 "type": "basic"
@@ -103,7 +103,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "open '/Applications/Safari.app'"
+                    "shell_command": "open -a Safari.app"
                   }
                 ],
                 "type": "basic"
@@ -118,7 +118,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "open '/Applications/kitty.app'"
+                    "shell_command": "open -a Terminal.app"
                   }
                 ],
                 "type": "basic"
