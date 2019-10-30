@@ -146,7 +146,7 @@ zplugin snippet OMZ::plugins/adb/_adb
 zplugin ice wait'3' lucid as'program' pick'$ZPFX/ddcctl' make'ddcctl PREFIX=$ZPFX'
 zplugin load kfix/ddcctl
 
-zplugin ice wait'3' lucid
+zplugin ice wait'3' lucid atload='!NVM_LAZY_LOAD=true'
 zplugin load lukechilds/zsh-nvm
 
 # }}}
