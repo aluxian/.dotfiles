@@ -23,6 +23,10 @@ export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PA
 
 # Zplugin init {{{
 
+if ! test -d "$HOME/.zplugin"; then
+  curl -fsSL https://raw.githubusercontent.com/zdharma/zplugin/master/doc/install.sh
+fi
+
 source "$HOME/.zplugin/bin/zplugin.zsh"
 autoload -Uz _zplugin
 (( ${+_comps} )) && _comps[zplugin]=_zplugin
@@ -32,122 +36,125 @@ autoload -Uz _zplugin
 # Zplugin plugins {{{
 
 # system information tool
-zplugin ice pick'bin/archey' as'program' atload'archey --offline'
-zplugin load obihann/archey-osx
+zplugin ice lucid pick'bin/archey' as'program' atload'archey --offline'
+zplugin light obihann/archey-osx
 
 # pretty, minimal and fast ZSH prompt
 zplugin ice pick'async.zsh' src'pure.zsh'
-zplugin load sindresorhus/pure
-
-# a collection of LS_COLORS definitions
-zplugin ice atclone'dircolors -b LS_COLORS > c.zsh' atpull'%atclone' pick'c.zsh'
-zplugin load trapd00r/LS_COLORS
+zplugin light sindresorhus/pure
 
 # keychain utilities for reading/writing secure environment vars
 zplugin ice lucid
-zplugin load onyxraven/zsh-osx-keychain
+zplugin light onyxraven/zsh-osx-keychain
+
+# a collection of LS_COLORS definitions
+zplugin ice wait'0' lucid atclone'gdircolors -b LS_COLORS > c.zsh' atpull'%atclone' pick'c.zsh'
+zplugin light trapd00r/LS_COLORS
 
 zplugin ice wait'0' lucid blockf
-zplugin load zsh-users/zsh-completions
+zplugin light zsh-users/zsh-completions
 
 zplugin ice wait'0' lucid atinit'ZPLGM[COMPINIT_OPTS]=-C; zpcompinit; zpcdreplay'
-zplugin load zdharma/fast-syntax-highlighting
+zplugin light zdharma/fast-syntax-highlighting
 
-zplugin ice wait'0' lucid atload'!_zsh_autosuggest_start'
-zplugin load zsh-users/zsh-autosuggestions
+zplugin ice wait'0' lucid atload'_zsh_autosuggest_start'
+zplugin light zsh-users/zsh-autosuggestions
 
 zplugin ice wait'0' lucid
 zplugin snippet OMZ::plugins/git/git.plugin.zsh
 
-zplugin ice wait'1' lucid atpull'ruby -e install' atload'!eval $(brew shellenv)'
-zplugin load Homebrew/install
+zplugin ice wait'0' lucid
+zplugin light mroth/evalcache
 
-zplugin ice wait'1' lucid
-zplugin load b4b4r07/enhancd
+zplugin ice wait'0' lucid atpull'ruby -e install' atload'_evalcache brew shellenv' nocompile''
+zplugin light Homebrew/install
 
-zplugin ice wait'1' lucid
-zplugin load mafredri/zsh-async
+zplugin ice wait'0' lucid
+zplugin light b4b4r07/enhancd
 
-zplugin ice wait'1' lucid
-zplugin load MichaelAquilina/zsh-you-should-use
+zplugin ice wait'0' lucid
+zplugin light mafredri/zsh-async
 
-zplugin ice wait'1' lucid
+zplugin ice wait'0' lucid
+zplugin light MichaelAquilina/zsh-you-should-use
+
+zplugin ice wait'0' lucid
 zplugin snippet OMZ::plugins/common-aliases/common-aliases.plugin.zsh
 
-zplugin ice wait'1' lucid pick'manydots-magic' compile'manydots-magic'
-zplugin load knu/zsh-manydots-magic
+zplugin ice wait'0' lucid pick'manydots-magic' compile'manydots-magic'
+zplugin light knu/zsh-manydots-magic
 
-zplugin ice wait'1' lucid
-zplugin load supercrabtree/k
+zplugin ice wait'0' lucid
+zplugin light supercrabtree/k
 
-zplugin ice wait'2' lucid as'program' pick'bin/git-dsf'
-zplugin load zdharma/zsh-diff-so-fancy
+zplugin ice wait'1' lucid as'program' pick'bin/git-dsf'
+zplugin light zdharma/zsh-diff-so-fancy
 
-zplugin ice wait'2' lucid blockf
+zplugin ice wait'1' lucid blockf
 zplugin snippet OMZ::plugins/fzf/fzf.plugin.zsh
 
-zplugin ice wait'2' lucid
+zplugin ice wait'1' lucid
 zplugin snippet OMZ::plugins/brew/brew.plugin.zsh
 
-zplugin ice wait'2' lucid blockf
+zplugin ice wait'1' lucid blockf
 zplugin snippet 'https://raw.githubusercontent.com/chipp/dotfiles/f172f33/.oh-my-zsh/custom/plugins/fastlane/fastlane.plugin.zsh'
 
-zplugin ice wait'2' lucid
+zplugin ice wait'1' lucid
 zplugin snippet OMZ::plugins/gitignore/gitignore.plugin.zsh
 
-zplugin ice wait'2' lucid atload'!ZSH_TMUX_FIXTERM=false'
+zplugin ice wait'1' lucid atload'ZSH_TMUX_FIXTERM=false'
 zplugin snippet OMZ::plugins/tmux/tmux.plugin.zsh
 
-zplugin ice wait'2' lucid
+zplugin ice wait'1' lucid
 zplugin snippet OMZ::plugins/pyenv/pyenv.plugin.zsh
 
-zplugin ice wait'2' lucid
+zplugin ice wait'1' lucid
 zplugin snippet OMZ::plugins/dash/dash.plugin.zsh
 
-zplugin ice wait'2' lucid
+zplugin ice wait'1' lucid
 zplugin snippet OMZ::plugins/encode64/encode64.plugin.zsh
 
-zplugin ice wait'2' lucid
+zplugin ice wait'1' lucid
 zplugin snippet OMZ::plugins/yarn/yarn.plugin.zsh
 
-zplugin ice wait'2' lucid
+zplugin ice wait'1' lucid
 zplugin snippet OMZ::plugins/sudo/sudo.plugin.zsh
 
-zplugin ice wait'2' lucid
+zplugin ice wait'1' lucid
 zplugin snippet OMZ::plugins/gradle/gradle.plugin.zsh
 
-zplugin ice wait'2' lucid
+zplugin ice wait'1' lucid
 zplugin snippet OMZ::plugins/dotenv/dotenv.plugin.zsh
 
-zplugin ice wait'2' lucid
+zplugin ice wait'1' lucid
 zplugin snippet OMZ::plugins/transfer/transfer.plugin.zsh
 
-zplugin ice wait'2' lucid
+zplugin ice wait'1' lucid
 zplugin snippet OMZ::plugins/colored-man-pages/colored-man-pages.plugin.zsh
 
-zplugin ice wait'2' lucid
-zplugin load lukechilds/zsh-better-npm-completion
+zplugin ice wait'1' lucid
+zplugin light lukechilds/zsh-better-npm-completion
 
-zplugin ice wait'2' lucid as'program' pick'$ZPFX/bin/git-now' make'prefix=$ZPFX install'
-zplugin load iwata/git-now
+zplugin ice wait'1' lucid as'program' pick'$ZPFX/bin/git-now' make'prefix=$ZPFX install'
+zplugin light iwata/git-now
 
-zplugin ice wait'2' lucid as'program' pick'$ZPFX/bin/git-alias' make'PREFIX=$ZPFX' nocompile
-zplugin load tj/git-extras
+zplugin ice wait'1' lucid as'program' pick'$ZPFX/bin/git-alias' make'PREFIX=$ZPFX' nocompile
+zplugin light tj/git-extras
 
-zplugin ice wait'2' lucid as'program' atclone'perl Makefile.PL PREFIX=$ZPFX' atpull'%atclone' make'install' pick'$ZPFX/bin/git-cal'
-zplugin load k4rthik/git-cal
+zplugin ice wait'1' lucid as'program' atclone'perl Makefile.PL PREFIX=$ZPFX' atpull'%atclone' make'install' pick'$ZPFX/bin/git-cal'
+zplugin light k4rthik/git-cal
 
-zplugin ice wait'2' lucid as'command'
-zplugin load paulirish/git-open
+zplugin ice wait'1' lucid as'command'
+zplugin light paulirish/git-open
 
-zplugin ice wait'3' lucid as'completion' blockf
+zplugin ice wait'1' lucid as'completion' blockf
 zplugin snippet OMZ::plugins/adb/_adb
 
-zplugin ice wait'3' lucid as'program' pick'$ZPFX/ddcctl' make'ddcctl PREFIX=$ZPFX'
-zplugin load kfix/ddcctl
+zplugin ice wait'1' lucid as'program' pick'$ZPFX/ddcctl' make'ddcctl PREFIX=$ZPFX'
+zplugin light kfix/ddcctl
 
-zplugin ice wait'3' lucid atload='!NVM_LAZY_LOAD=true'
-zplugin load lukechilds/zsh-nvm
+zplugin ice wait'1' lucid atinit='NVM_LAZY_LOAD=true'
+zplugin light lukechilds/zsh-nvm
 
 # }}}
 
