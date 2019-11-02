@@ -48,6 +48,9 @@ zplg snippet OMZ::plugins/dotenv/dotenv.plugin.zsh
 zplg ice wait lucid
 zplg snippet OMZ::plugins/git/git.plugin.zsh
 
+zplg ice wait lucid atinit'ENHANCD_DISABLE_DOT=1'
+zplg light b4b4r07/enhancd
+
 zplg ice wait lucid
 zplg light DarrinTisdale/zsh-aliases-exa
 
