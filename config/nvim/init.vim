@@ -1,4 +1,4 @@
-" vim:fileencoding=utf-8:ft=conf:foldmethod=marker
+" vim:fileencoding=utf-8:ft=vim:foldmethod=marker
 
 " vim-plug auto install {{{
 
@@ -19,12 +19,11 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'fszymanski/fzf-gitignore', {'do': ':UpdateRemotePlugins'}
 
   Plug 'itchyny/lightline.vim'
-  Plug 'kaicataldo/material.vim'
+  Plug 'morhetz/gruvbox'
 
   Plug 'airblade/vim-gitgutter'
   Plug 'int3/vim-extradite'
   Plug 'tpope/vim-fugitive'
-  Plug 'tpope/vim-git'
 
   Plug 'mhinz/vim-startify'
 
@@ -58,7 +57,7 @@ call neomake#configure#automake('nrwi', 500)
 
 " lightline.vim {{{
 
-let g:lightline = { 'colorscheme': 'material_vim' }
+let g:lightline = { 'colorscheme': 'gruvbox' }
 
 " }}}
 
@@ -104,10 +103,15 @@ au FileType plantuml let g:plantuml_previewer#plantuml_jar_path = get(matchlist(
 
 " }}}
 
-" material.vim {{{
+" gruvbox {{{
 
-let g:material_theme_style = 'palenight'
-let g:material_terminal_italics = 1
+let g:gruvbox_bold = 1
+let g:gruvbox_italic = 1
+let g:gruvbox_underline = 1
+let g:gruvbox_undercurl = 1
+let g:gruvbox_termcolors = 256
+let g:gruvbox_contrast_dark = 'medium'
+let g:gruvbox_contrast_light = 'medium'
 
 " }}}
 
@@ -116,10 +120,10 @@ let g:material_terminal_italics = 1
 " nvim {{{
 
 " python
-let g:python3_host_prog = $HOME.'/.local/share/virtualenvs/nvim/bin/python3'
+let g:python3_host_prog = $HOME.'/.pyenv/versions/nvim/bin/python3'
 
 " color scheme
-colorscheme material
+colorscheme gruvbox
 
 " vim ui
 set cursorline      " highlight current line
