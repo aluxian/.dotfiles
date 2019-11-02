@@ -45,6 +45,9 @@ zplg ice wait lucid
 zplg snippet OMZ::plugins/dotenv/dotenv.plugin.zsh
 
 zplg ice wait lucid
+zplg snippet OMZ::plugins/git/git.plugin.zsh
+
+zplg ice wait lucid
 zplg light DarrinTisdale/zsh-aliases-exa
 
 zplg ice wait lucid as'program' pick'bin/git-dsf'
@@ -86,11 +89,5 @@ setopt histignorespace
 
 # allow use of comments in interactive code
 setopt interactivecomments
-
-# }}}
-
-# Aliases {{{
-
-alias g=git
 
 # }}}
