@@ -118,9 +118,6 @@ zplugin ice wait'1' lucid
 zplugin snippet OMZ::plugins/yarn/yarn.plugin.zsh
 
 zplugin ice wait'1' lucid
-zplugin snippet OMZ::plugins/sudo/sudo.plugin.zsh
-
-zplugin ice wait'1' lucid
 zplugin snippet OMZ::plugins/gradle/gradle.plugin.zsh
 
 zplugin ice wait'1' lucid
