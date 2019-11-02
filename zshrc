@@ -2,7 +2,8 @@
 
 # Zplugin init {{{
 
-[ -d "$ZPLG_HOME" ] || curl -fsSL https://raw.githubusercontent.com/zdharma/zplugin/master/doc/install.sh | zsh
+[ -d "$ZPLG_HOME" ] ||
+  curl -fsSL https://raw.githubusercontent.com/zdharma/zplugin/master/doc/install.sh | zsh
 source "$ZPLG_HOME/bin/zplugin.zsh"
 autoload -Uz _zplugin
 (( ${+_comps} )) && _comps[zplugin]=_zplugin
