@@ -63,10 +63,10 @@ zplg light kfix/ddcctl
 zplg ice wait lucid atinit='NVM_LAZY_LOAD=true NVM_NO_USE=true'
 zplg light lukechilds/zsh-nvm
 
-zplg ice wait lucid as'program' pick'bin/pyenv'
+zplg ice wait lucid as'program' pick'bin/pyenv' atload'pyenv init - --no-rehash zsh | eval'
 zplg light pyenv/pyenv
 
-zplg ice wait lucid as'program' pick'bin/pyenv-virtualenvs' atpull='PREFIX=$ZPLG_HOME/plugins/pyenv---pyenv/ ./install.sh'
+zplg ice wait lucid as'program' pick'bin/pyenv-virtualenvs' atpull='PREFIX=$ZPLG_HOME/plugins/pyenv---pyenv/ ./install.sh' atload'pyenv virtualenv-init - --no-rehash zsh | eval'
 zplg light pyenv/pyenv-virtualenv
 
 # }}}

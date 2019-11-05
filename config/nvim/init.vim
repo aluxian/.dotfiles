@@ -32,9 +32,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
   Plug 'deoplete-plugins/deoplete-jedi'
 
-  Plug 'sbdchd/neoformat'
-
-  Plug 'neomake/neomake'
+  Plug 'dense-analysis/ale'
 
   Plug 'aklt/plantuml-syntax'
 
@@ -48,12 +46,6 @@ call plug#end()
 " }}}
 
 " Plugins config {{{
-
-" Neomake {{{
-
-call neomake#configure#automake('nrwi', 500)
-
-" }}}
 
 " lightline.vim {{{
 
@@ -72,26 +64,6 @@ let g:ale_lint_delay = 100 " ms
 " Deoplete {{{
 
 let g:deoplete#enable_at_startup = 1
-
-" }}}
-
-" Neoformat {{{
-
-let g:neoformat_enabled_python = ['autopep8']
-let g:neoformat_enabled_php = ['phpcsfixer']
-let g:neoformat_enabled_javascript = ['prettier']
-
-augroup fmt
-  autocmd!
-  autocmd BufWritePre * undojoin | Neoformat
-augroup END
-
-" }}}
-
-" Neomake {{{
-
-let g:neomake_python_enabled_makers = ['pylint', 'mypy']
-let g:neomake_javascript_enabled_makers = ['tslint', 'eslint']
 
 " }}}
 
