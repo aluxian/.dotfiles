@@ -20,11 +20,12 @@
                  [:!Rt [:open-a "kitty"]]
                  [:!Rm [:open-a "Mail"]]
                  [:!Rj [:open-a "Messenger for Desktop"]]
-                 [:!Ru [:open-a "Music"]]
+                 [:!Ri [:open-a "Music"]]
                  [:!Rn [:open-a "Notes"]]
                  [:!Rr [:open-a "Reminders"]]
                  [:!Rs [:open-a "Safari"]]
                  [:!Rk [:open-a "Slack"]]
+                 [:!Ru [:open-a "UlyssesMac"]]
                  [:!Rx [:open-a "Xcode"]]]}
         {:des "key-mode: caps_lock"
          :rules [:caps_lock-mode

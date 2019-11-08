@@ -129,7 +129,7 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "u",
+            "key_code" : "i",
             "modifiers" : {
               "mandatory" : [ "right_shift" ]
             }
@@ -180,6 +180,17 @@
           },
           "to" : [ {
             "shell_command" : "open -a 'Slack'"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "u",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "open -a 'UlyssesMac'"
           } ],
           "type" : "basic"
         }, {
