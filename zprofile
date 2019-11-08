@@ -9,8 +9,5 @@ export PATH="/usr/local/opt/sqlite/bin:$PATH"
 # golang
 export PATH="$GOPATH/bin:$PATH"
 
-# Android
-export PATH="$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/tools:$PATH"
-
 # Visual Studio Code
 export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
