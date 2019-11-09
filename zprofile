@@ -8,6 +8,3 @@ export PATH="/usr/local/opt/sqlite/bin:$PATH"
 
 # golang
 export PATH="$GOPATH/bin:$PATH"
-
-# Visual Studio Code
-export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
