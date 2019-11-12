@@ -12,6 +12,7 @@
          :rules [[:##non_us_backslash :escape]]}
         {:des "launch apps using right_shift + key"
          :rules [[:!Ra [:open-a "Android Studio"]]
+                 [:!Rb [:open-a "Bear"]]
                  [:!Rc [:open-a "Calendar"]]
                  [:!Rd [:open-a "Dash"]]
                  [:!Rh [:open-a "DEVONthink 3"]]
