@@ -16,9 +16,6 @@ defaults write -g InitialKeyRepeat -int 15
 # Delay between repeats
 defaults write -g KeyRepeat -int 2
 
-# Allow quitting Finder via ⌘+Q
-defaults write com.apple.finder QuitMenuItem -bool true
-
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 
