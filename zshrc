@@ -1,5 +1,12 @@
 # vim:fileencoding=utf-8:ft=zsh:foldmethod=marker
 
+# Homebrew init {{{
+
+[ -f "$(which brew)" ] ||
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# }}}
+
 # Zplugin init {{{
 
 [ -d "$ZPLG_HOME" ] ||
@@ -20,9 +27,6 @@ zplg light sindresorhus/pure
 
 zplg ice lucid
 zplg light onyxraven/zsh-osx-keychain
-
-zplg ice lucid atpull'_clear_cache_eval_brew_shellenv' atload'_cached_eval_brew_shell'
-zplg light aluxian/cached-eval-brew-shellenv-zsh
 
 zplg ice wait lucid
 zplg snippet OMZ::plugins/brew/brew.plugin.zsh
@@ -89,5 +93,3 @@ setopt histignorespace
 setopt interactivecomments
 
 # }}}
-
-pyenv init - zsh | eval
