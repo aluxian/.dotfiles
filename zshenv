@@ -12,6 +12,9 @@ export HOMEBREW_REPOSITORY="/usr/local/Homebrew"
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_INSECURE_REDIRECT=1
 
+# node
+export NODE_REPL_HISTORY="$HOME/.cache/node_repl_history"
+
 # golang
 export GOPATH="$HOME/.local/share/go"
 export GOBIN="$HOME/.local/bin"
