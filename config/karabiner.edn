@@ -15,6 +15,7 @@
                  [:!Rb [:open-a "Bear"]]
                  [:!Rc [:open-a "Calendar"]]
                  [:!Rd [:open-a "Dash"]]
+                 [:!Ro [:open-a "Day One"]]
                  [:!Rh [:open-a "DEVONthink 3"]]
                  [:!Rf [:open-a "Finder"]]
                  [:!Rw [:open-a "iA Writer"]]
@@ -26,7 +27,6 @@
                  [:!Rr [:open-a "Reminders"]]
                  [:!Rs [:open-a "Safari"]]
                  [:!Rk [:open-a "Slack"]]
-                 [:!Ru [:open-a "UlyssesMac"]]
                  [:!Rx [:open-a "Xcode"]]]}
         {:des "key-mode: caps_lock"
          :rules [:caps_lock-mode
