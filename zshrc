@@ -1,19 +1,18 @@
 # vim:fileencoding=utf-8:ft=zsh:foldmethod=marker
 
-# Homebrew init {{{
+# functions {{{
 
-[ -f "$(which brew)" ] ||
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fpath=("$XDG_CONFIG_HOME/zsh/functions" $fpath)
+autoload -Uz "$XDG_CONFIG_HOME/zsh/functions/*"
 
 # }}}
 
 # Zplugin init {{{
 
-[ -d "$ZPLG_HOME" ] ||
-  curl -fsSL https://raw.githubusercontent.com/zdharma/zplugin/master/doc/install.sh | zsh
-source "$ZPLG_HOME/bin/zplugin.zsh"
-autoload -Uz _zplugin
-(( ${+_comps} )) && _comps[zplugin]=_zplugin
+typeset -A ZPLGM
+ZPLGM[HOME_DIR]=$ZPLG_HOME_DIR
+ZPLGM[ZCOMPDUMP_PATH]=$ZPLG_ZCOMPDUMP_PATH
+source "$ZPLG_HOME_DIR/bin/zplugin.zsh"
 
 # }}}
 
@@ -64,7 +63,7 @@ zplg light zdharma/zsh-diff-so-fancy
 zplg ice wait lucid as'program' pick'$ZPFX/ddcctl' make'ddcctl PREFIX=$ZPFX'
 zplg light kfix/ddcctl
 
-zplg ice wait lucid atinit='NVM_LAZY_LOAD=true NVM_NO_USE=true'
+zplg ice wait lucid
 zplg light lukechilds/zsh-nvm
 
 # }}}
