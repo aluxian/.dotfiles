@@ -1,0 +1,4 @@
+# vim:fileencoding=utf-8:ft=zsh:foldmethod=marker
+
+mkdir -p $ZPLG_HOME_DIR
+git clone https://github.com/zdharma/zplugin.git $ZPLG_HOME_DIR/bin
