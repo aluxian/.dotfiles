@@ -6,6 +6,7 @@ export CLICOLOR=1
 # zsh
 export HISTSIZE=100000
 export SAVEHIST=100000
+export HISTFILE="$XDG_CACHE_HOME/zsh_history"
 
 # neovim
 export EDITOR=nvim
