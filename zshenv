@@ -24,8 +24,8 @@ export NPM_CONFIG_CACHE="$XDG_CACHE_HOME/npm"
 
 # nvm
 export NVM_DIR="$XDG_DATA_HOME/nvm"
-export NVM_LAZY_LOAD=1
-export NVM_NO_USE=1
+export NVM_LAZY_LOAD=true
+export NVM_NO_USE=true
 
 # tmux
 export ZSH_TMUX_CONFIG="$XDG_CONFIG_HOME/tmux/tmux.conf"
@@ -42,6 +42,7 @@ export ANDROID_HOME="$HOME/Library/Android/sdk"
 
 # pyenv 
 export PYENV_ROOT="$XDG_DATA_HOME/pyenv"
+export PYENV_SHELL="zsh"
 
 # Zplugin
 export ZPLG_HOME_DIR="$XDG_DATA_HOME/zplugin"

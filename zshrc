@@ -66,6 +66,18 @@ zplg light kfix/ddcctl
 zplg ice wait lucid
 zplg light lukechilds/zsh-nvm
 
+zplg ice wait lucid
+zplg light zdharma/fast-syntax-highlighting
+
+zplg ice wait lucid blockf
+zplg light zsh-users/zsh-completions
+
+zplg ice wait lucid
+zplg light zsh-users/zsh-autosuggestions
+
+zplg ice wait lucid
+zplg light mollifier/cd-gitroot
+
 # }}}
 
 # Zsh config {{{
