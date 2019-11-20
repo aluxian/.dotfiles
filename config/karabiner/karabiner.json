@@ -263,6 +263,51 @@
               } ]
             }
           }
+        }, {
+          "from" : {
+            "key_code" : "d"
+          },
+          "to" : [ {
+            "shell_command" : "open \"$HOME/Downloads\""
+          } ],
+          "conditions" : [ {
+            "name" : "caps_lock-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 250
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "caps_lock-mode",
+              "value" : 1
+            }
+          }, {
+            "shell_command" : "open \"$HOME/Downloads\""
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "caps_lock"
+            }, {
+              "key_code" : "d"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "caps_lock-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          }
         } ]
       } ]
     },
