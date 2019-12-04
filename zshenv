@@ -44,6 +44,12 @@ export ANDROID_HOME="$HOME/Library/Android/sdk"
 export PYENV_ROOT="$XDG_DATA_HOME/pyenv"
 export PYENV_SHELL="zsh"
 
+# rbenv
+export RBENV_ROOT="$XDG_DATA_HOME/rbenv"
+
+# rubygems
+export GEM_SPEC="$XDG_CACHE_HOME/gem"
+
 # Zplugin
 export ZPLG_HOME_DIR="$XDG_DATA_HOME/zplugin"
 export ZPLG_ZCOMPDUMP_PATH="$XDG_CACHE_HOME/zcompdump"
