@@ -18,15 +18,14 @@
                  [:!Ro [:open-a "Day One"]]
                  [:!Rh [:open-a "DEVONthink 3"]]
                  [:!Rf [:open-a "Finder"]]
-                 [:!Rw [:open-a "iA Writer"]]
                  [:!Rt [:open-a "kitty"]]
                  [:!Rm [:open-a "Mail"]]
-                 [:!Rj [:open-a "Messenger for Desktop"]]
                  [:!Ri [:open-a "Music"]]
                  [:!Rn [:open-a "Notes"]]
                  [:!Rr [:open-a "Reminders"]]
                  [:!Rs [:open-a "Safari"]]
                  [:!Rk [:open-a "Slack"]]
+                 [:!Rj [:open-a "Telegram"]]
                  [:!Rx [:open-a "Xcode"]]]}
         {:des "key-mode: caps_lock"
          :rules [:caps_lock-mode
