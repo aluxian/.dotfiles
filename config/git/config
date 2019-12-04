@@ -1,7 +1,5 @@
 [advice]
 	statusHints = false
-[include]
-	path = gitalias.txt
 [user]
 	name = Alexandru Rosianu
 	email = me@aluxian.com
