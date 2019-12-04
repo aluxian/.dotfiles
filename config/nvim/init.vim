@@ -82,8 +82,8 @@ let g:gruvbox_italic = 1
 let g:gruvbox_underline = 1
 let g:gruvbox_undercurl = 1
 let g:gruvbox_termcolors = 256
-let g:gruvbox_contrast_dark = 'medium'
-let g:gruvbox_contrast_light = 'medium'
+let g:gruvbox_contrast_dark = 'hard'
+let g:gruvbox_contrast_light = 'hard'
 
 " }}}
 
@@ -92,7 +92,10 @@ let g:gruvbox_contrast_light = 'medium'
 " nvim {{{
 
 " python
-let g:python3_host_prog = $HOME.'/.pyenv/versions/nvim/bin/python3'
+let g:python3_host_prog = $PYENV_ROOT.'/versions/3.7.4/envs/neovim/bin/python3'
+
+" netrw
+let g:netrw_keepdir = 0
 
 " color scheme
 colorscheme gruvbox
