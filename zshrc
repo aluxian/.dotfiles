@@ -81,6 +81,9 @@ zplg light zsh-users/zsh-autosuggestions
 zplg ice wait lucid
 zplg light mollifier/cd-gitroot
 
+zplg ice wait lucid blockf pick'manydots-magic'
+zplg light knu/zsh-manydots-magic
+
 # }}}
 
 # Zsh config {{{
