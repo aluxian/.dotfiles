@@ -48,7 +48,7 @@ export PYENV_SHELL="zsh"
 export RBENV_ROOT="$XDG_DATA_HOME/rbenv"
 
 # rubygems
-export GEM_SPEC="$XDG_CACHE_HOME/gem"
+export GEM_SPEC_CACHE="$XDG_CACHE_HOME/gem"
 
 # Zplugin
 export ZPLG_HOME_DIR="$XDG_DATA_HOME/zplugin"
@@ -57,3 +57,6 @@ export ZPLG_ZCOMPDUMP_PATH="$XDG_CACHE_HOME/zcompdump"
 # pipx
 export PIPX_HOME="$XDG_DATA_HOME/pipx"
 export PIPX_BIN_DIR="$XDG_BIN_HOME"
+
+# gcloud
+export CLOUDSDK_CONFIG="$XDG_DATA_HOME/gcloud"
