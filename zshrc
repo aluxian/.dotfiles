@@ -1,6 +1,6 @@
 # vim:fileencoding=utf-8:ft=zsh:foldmethod=marker
 
-# functions {{{
+# load functions {{{
 
 fpath=("$XDG_CONFIG_HOME/zsh/functions" $fpath)
 autoload -Uz "$XDG_CONFIG_HOME/zsh/functions/*"
