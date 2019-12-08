@@ -84,6 +84,9 @@ zplg light mollifier/cd-gitroot
 zplg ice wait lucid blockf pick'manydots-magic'
 zplg light knu/zsh-manydots-magic
 
+zplg ice wait lucid from'gh-r' as'program' mv'dbxcli* -> dbxcli' pick'dbxcli'
+zplg light dropbox/dbxcli
+
 # }}}
 
 # Zsh config {{{
