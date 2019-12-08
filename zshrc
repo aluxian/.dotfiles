@@ -46,6 +46,9 @@ zplg ice wait lucid
 zplg snippet OMZ::plugins/rbenv/rbenv.plugin.zsh
 
 zplg ice wait lucid
+zplg snippet OMZ::plugins/pyenv/pyenv.plugin.zsh
+
+zplg ice wait lucid
 zplg snippet OMZ::plugins/yarn/yarn.plugin.zsh
 
 zplg ice wait lucid
