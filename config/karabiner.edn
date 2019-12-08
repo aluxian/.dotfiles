@@ -22,6 +22,7 @@
                  [:!Rm [:open-a "Mail"]]
                  [:!Ri [:open-a "Music"]]
                  [:!Rn [:open-a "Notes"]]
+                 [:!Rp [:open-a "Photos"]]
                  [:!Rr [:open-a "Reminders"]]
                  [:!Rs [:open-a "Safari"]]
                  [:!Rk [:open-a "Slack"]]
