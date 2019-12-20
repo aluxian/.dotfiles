@@ -27,6 +27,9 @@ zplg light sindresorhus/pure
 zplg ice lucid
 zplg light onyxraven/zsh-osx-keychain
 
+zplg ice lucid
+zplg snippet OMZ::plugins/git/git.plugin.zsh
+
 zplg ice wait lucid
 zplg snippet OMZ::plugins/brew/brew.plugin.zsh
 
@@ -56,9 +59,6 @@ zplg snippet OMZ::plugins/kubectl/kubectl.plugin.zsh
 
 zplg ice wait lucid
 zplg snippet OMZ::plugins/dotenv/dotenv.plugin.zsh
-
-zplg ice wait lucid
-zplg snippet OMZ::plugins/git/git.plugin.zsh
 
 zplg ice wait lucid atinit'ENHANCD_DISABLE_DOT=1'
 zplg light b4b4r07/enhancd
