@@ -54,13 +54,13 @@ zplg snippet OMZ::plugins/pyenv/pyenv.plugin.zsh
 zplg ice wait lucid
 zplg snippet OMZ::plugins/yarn/yarn.plugin.zsh
 
-zplg ice wait lucid blockf
-zplg snippet OMZ::plugins/kubectl/kubectl.plugin.zsh
-
 zplg ice wait lucid
 zplg snippet OMZ::plugins/dotenv/dotenv.plugin.zsh
 
-zplg ice wait lucid atinit'ENHANCD_DISABLE_DOT=1'
+zplg ice wait lucid pick'.kubectl_aliases'
+zplg light ahmetb/kubectl-aliases
+
+zplg ice wait lucid
 zplg light b4b4r07/enhancd
 
 zplg ice wait lucid
@@ -75,9 +75,6 @@ zplg light kfix/ddcctl
 zplg ice wait lucid
 zplg light lukechilds/zsh-nvm
 
-zplg ice wait lucid
-zplg light zdharma/fast-syntax-highlighting
-
 zplg ice wait lucid blockf
 zplg light zsh-users/zsh-completions
 
@@ -87,14 +84,17 @@ zplg light zsh-users/zsh-autosuggestions
 zplg ice wait lucid
 zplg light mollifier/cd-gitroot
 
-zplg ice wait lucid blockf pick'manydots-magic'
-zplg light knu/zsh-manydots-magic
-
 zplg ice wait lucid from'gh-r' as'program' mv'uni* -> uni' pick'uni'
 zplg light arp242/uni
 
 zplg ice wait lucid from'gh-r' as'program' mv'dbxcli* -> dbxcli' pick'dbxcli'
 zplg light dropbox/dbxcli
+
+zplg ice wait lucid atinit'zpcompinit; zpcdreplay'
+zplg light zdharma/fast-syntax-highlighting
+
+zplg ice wait lucid blockf pick'manydots-magic'
+zplg light knu/zsh-manydots-magic
 
 # }}}
 

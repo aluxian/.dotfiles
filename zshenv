@@ -71,4 +71,10 @@ export ZSH_AUTOSUGGEST_USE_ASYNC=1
 
 # }}}
 
+# enhancd {{{
+
+export ENHANCD_DISABLE_DOT=1
+
+# }}}
+
 # }}}
