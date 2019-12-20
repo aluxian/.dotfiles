@@ -60,3 +60,13 @@ export PIPX_BIN_DIR="$XDG_BIN_HOME"
 
 # gcloud
 export CLOUDSDK_CONFIG="$XDG_DATA_HOME/gcloud"
+
+# zsh plugins {{{
+
+# zsh-autosuggestions {{{
+
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#928374"
+
+# }}}
+
+# }}}

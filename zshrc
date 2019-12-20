@@ -90,6 +90,9 @@ zplg light mollifier/cd-gitroot
 zplg ice wait lucid blockf pick'manydots-magic'
 zplg light knu/zsh-manydots-magic
 
+zplg ice wait lucid from'gh-r' as'program' mv'uni* -> uni' pick'uni'
+zplg light arp242/uni
+
 zplg ice wait lucid from'gh-r' as'program' mv'dbxcli* -> dbxcli' pick'dbxcli'
 zplg light dropbox/dbxcli
 
@@ -117,5 +120,12 @@ setopt histignorespace
 
 # allow use of comments in interactive code
 setopt interactivecomments
+
+# }}}
+
+# Aliases {{{
+
+# git
+alias gb='git branch --sort=-committerdate'
 
 # }}}
