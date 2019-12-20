@@ -66,6 +66,8 @@ export CLOUDSDK_CONFIG="$XDG_DATA_HOME/gcloud"
 # zsh-autosuggestions {{{
 
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#928374"
+export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
+export ZSH_AUTOSUGGEST_USE_ASYNC=1
 
 # }}}
 
