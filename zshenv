@@ -35,6 +35,9 @@ export NVM_AUTO_USE=true
 # tmux
 export ZSH_TMUX_CONFIG="$XDG_CONFIG_HOME/tmux/tmux.conf"
 
+# ncftp
+export NCFTPDIR="$XDG_CACHE_HOME/ncftp"
+
 # gradle
 export GRADLE_USER_HOME="$XDG_DATA_HOME/gradle"
 
