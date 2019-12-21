@@ -30,6 +30,7 @@ export NPM_CONFIG_CACHE="$XDG_CACHE_HOME/npm"
 export NVM_DIR="$XDG_DATA_HOME/nvm"
 export NVM_LAZY_LOAD=true
 export NVM_NO_USE=true
+export NVM_AUTO_USE=true
 
 # tmux
 export ZSH_TMUX_CONFIG="$XDG_CONFIG_HOME/tmux/tmux.conf"
@@ -52,6 +53,7 @@ export VSCODE_EXTENSIONS="$XDG_DATA_HOME/vscode/extensions"
 
 # Android
 export ANDROID_HOME="$HOME/Library/Android/sdk"
+export ANDROID_TMP="$XDG_CACHE_HOME/android"
 
 # pylint
 export PYLINTHOME="$XDG_CACHE_HOME/pylint.d"
