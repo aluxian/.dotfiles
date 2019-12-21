@@ -50,3 +50,6 @@ defaults write com.apple.Safari IncludeDevelopMenu -bool true
 
 # Enable “Do Not Track” in Safari
 defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
+
+# Allow key repeat in VSCodium
+defaults write com.visualstudio.code.oss ApplePressAndHoldEnabled -bool false
