@@ -15,6 +15,10 @@ export HOMEBREW_NO_INSECURE_REDIRECT=1
 
 # less
 export LESSHISTFILE="$XDG_CACHE_HOME/lesshst"
+export LESSKEY="$XDG_DATA_HOME/less"
+
+# gnupg
+export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 
 # node
 export NODE_REPL_HISTORY="$XDG_CACHE_HOME/node_repl_history"
@@ -33,12 +37,24 @@ export ZSH_TMUX_CONFIG="$XDG_CONFIG_HOME/tmux/tmux.conf"
 # gradle
 export GRADLE_USER_HOME="$XDG_DATA_HOME/gradle"
 
+# docker
+export DOCKER_CONFIG="$XDG_DATA_HOME/docker"
+
+# subversion
+export SUBVERSION_HOME="$XDG_DATA_HOME/subversion"
+
 # golang
 export GOPATH="$XDG_DATA_HOME/go"
 export GOBIN="$XDG_BIN_HOME"
 
+# VS Code
+export VSCODE_EXTENSIONS="$XDG_DATA_HOME/vscode/extensions"
+
 # Android
 export ANDROID_HOME="$HOME/Library/Android/sdk"
+
+# pylint
+export PYLINTHOME="$XDG_CACHE_HOME/pylint.d"
 
 # pyenv 
 export PYENV_ROOT="$XDG_DATA_HOME/pyenv"
@@ -46,6 +62,7 @@ export PYENV_SHELL="zsh"
 
 # rbenv
 export RBENV_ROOT="$XDG_DATA_HOME/rbenv"
+export RBENV_SHELL="zsh"
 
 # rubygems
 export GEM_SPEC_CACHE="$XDG_CACHE_HOME/gem"
