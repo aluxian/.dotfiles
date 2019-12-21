@@ -48,6 +48,9 @@ export SUBVERSION_HOME="$XDG_DATA_HOME/subversion"
 export GOPATH="$XDG_DATA_HOME/go"
 export GOBIN="$XDG_BIN_HOME"
 
+# enhancd
+export ENHANCD_DIR="$XDG_CACHE_HOME/enhancd"
+
 # VS Code
 export VSCODE_EXTENSIONS="$XDG_DATA_HOME/vscode/extensions"
 
