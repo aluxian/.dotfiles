@@ -7,7 +7,7 @@
   "profiles" : [ {
     "complex_modifications" : {
       "parameters" : {
-        "basic.simultaneous_threshold_milliseconds" : 50,
+        "basic.simultaneous_threshold_milliseconds" : 200,
         "basic.to_delayed_action_delay_milliseconds" : 500,
         "basic.to_if_alone_timeout_milliseconds" : 1000,
         "basic.to_if_held_down_threshold_milliseconds" : 500
@@ -29,6 +29,17 @@
       }, {
         "description" : "launch apps using right_shift + key",
         "manipulators" : [ {
+          "from" : {
+            "key_code" : "q",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "open -a 'Activity Monitor'"
+          } ],
+          "type" : "basic"
+        }, {
           "from" : {
             "key_code" : "a",
             "modifiers" : {
@@ -129,6 +140,17 @@
           "type" : "basic"
         }, {
           "from" : {
+            "key_code" : "l",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "open -a 'Messages'"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
             "key_code" : "i",
             "modifiers" : {
               "mandatory" : [ "right_shift" ]
@@ -162,17 +184,6 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "r",
-            "modifiers" : {
-              "mandatory" : [ "right_shift" ]
-            }
-          },
-          "to" : [ {
-            "shell_command" : "open -a 'Reminders'"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
             "key_code" : "s",
             "modifiers" : {
               "mandatory" : [ "right_shift" ]
@@ -202,6 +213,17 @@
           },
           "to" : [ {
             "shell_command" : "open -a 'Telegram'"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "r",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "open -a 'Things3'"
           } ],
           "type" : "basic"
         }, {
@@ -265,6 +287,51 @@
           }
         }, {
           "from" : {
+            "key_code" : "t"
+          },
+          "to" : [ {
+            "shell_command" : "open \"$HOME/.Trash\""
+          } ],
+          "conditions" : [ {
+            "name" : "caps_lock-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 250
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "caps_lock-mode",
+              "value" : 1
+            }
+          }, {
+            "shell_command" : "open \"$HOME/.Trash\""
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "caps_lock"
+            }, {
+              "key_code" : "t"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "caps_lock-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          }
+        }, {
+          "from" : {
             "key_code" : "d"
           },
           "to" : [ {
@@ -294,6 +361,51 @@
               "key_code" : "caps_lock"
             }, {
               "key_code" : "d"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "caps_lock-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          }
+        }, {
+          "from" : {
+            "key_code" : "m"
+          },
+          "to" : [ {
+            "shell_command" : "open \"$HOME/Movies\""
+          } ],
+          "conditions" : [ {
+            "name" : "caps_lock-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 250
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "caps_lock-mode",
+              "value" : 1
+            }
+          }, {
+            "shell_command" : "open \"$HOME/Movies\""
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "caps_lock"
+            }, {
+              "key_code" : "m"
             } ],
             "simultaneous_options" : {
               "detect_key_down_uninterruptedly" : true,

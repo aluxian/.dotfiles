@@ -1,5 +1,5 @@
 {:profiles {:Default {:default true
-                      :sim     50
+                      :sim     200
                       :delay   500
                       :alone   1000
                       :held    500}}
@@ -11,7 +11,8 @@
  :main [{:des "map section/plus-minus key to escape"
          :rules [[:##non_us_backslash :escape]]}
         {:des "launch apps using right_shift + key"
-         :rules [[:!Ra [:open-a "Android Studio"]]
+         :rules [[:!Rq [:open-a "Activity Monitor"]]
+                 [:!Ra [:open-a "Android Studio"]]
                  [:!Rb [:open-a "Bear"]]
                  [:!Rc [:open-a "Calendar"]]
                  [:!Rd [:open-a "Dash"]]
@@ -20,15 +21,18 @@
                  [:!Rf [:open-a "Finder"]]
                  [:!Rt [:open-a "kitty"]]
                  [:!Rm [:open-a "Mail"]]
+                 [:!Rl [:open-a "Messages"]]
                  [:!Ri [:open-a "Music"]]
                  [:!Rn [:open-a "Notes"]]
                  [:!Rp [:open-a "Photos"]]
-                 [:!Rr [:open-a "Reminders"]]
                  [:!Rs [:open-a "Safari"]]
                  [:!Rk [:open-a "Slack"]]
                  [:!Rj [:open-a "Telegram"]]
+                 [:!Rr [:open-a "Things3"]]
                  [:!Rx [:open-a "Xcode"]]]}
         {:des "key-mode: caps_lock"
          :rules [:caps_lock-mode
                  [:grave_accent_and_tilde [:open "$HOME"]]
-                 [:d [:open "$HOME/Downloads"]]]}]}
+                 [:t [:open "$HOME/.Trash"]]
+                 [:d [:open "$HOME/Downloads"]]
+                 [:m [:open "$HOME/Movies"]]]}]}
