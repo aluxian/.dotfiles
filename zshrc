@@ -3,7 +3,7 @@
 # load functions {{{
 
 fpath=("$XDG_CONFIG_HOME/zsh/functions" $fpath)
-autoload -Uz "$XDG_CONFIG_HOME/zsh/functions/*"
+autoload -Uz $XDG_CONFIG_HOME/zsh/functions/*
 
 # }}}
 
@@ -47,6 +47,9 @@ zplg snippet OMZ::plugins/dash/dash.plugin.zsh
 
 zplg ice wait lucid
 zplg snippet OMZ::plugins/yarn/yarn.plugin.zsh
+
+zplg ice wait lucid
+zplg snippet OMZ::plugins/npm/npm.plugin.zsh
 
 zplg ice wait lucid
 zplg snippet OMZ::plugins/dotenv/dotenv.plugin.zsh
