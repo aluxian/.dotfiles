@@ -30,6 +30,10 @@
                  [:!Rj [:open-a "Telegram"]]
                  [:!Rr [:open-a "Things3"]]
                  [:!Rx [:open-a "Xcode"]]]}
+        {:des "launch apps using fn + key"
+         :rules [[:!Fb [:open-a "Books"]]
+                 [:!Fi [:open-a "IINA"]]
+                 [:!Fs [:open-a "Sketch"]]]}
         {:des "key-mode: caps_lock"
          :rules [:caps_lock-mode
                  [:grave_accent_and_tilde [:open "$HOME"]]

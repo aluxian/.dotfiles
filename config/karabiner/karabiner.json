@@ -239,6 +239,42 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "launch apps using fn + key",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "b",
+            "modifiers" : {
+              "mandatory" : [ "fn" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "open -a 'Books'"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "i",
+            "modifiers" : {
+              "mandatory" : [ "fn" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "open -a 'IINA'"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "s",
+            "modifiers" : {
+              "mandatory" : [ "fn" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "open -a 'Sketch'"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "key-mode: caps_lock",
         "manipulators" : [ {
           "from" : {
