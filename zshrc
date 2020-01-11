@@ -121,5 +121,7 @@ setopt interactivecomments
 
 # git
 alias gb='git branch --sort=-committerdate'
+alias ggsup='git branch --set-upstream-to=origin/$(git symbolic-ref --short HEAD)'
+alias gpsup='git push --set-upstream origin $(git symbolic-ref --short HEAD)'
 
 # }}}
