@@ -58,8 +58,12 @@ export ENHANCD_DIR="$XDG_CACHE_HOME/enhancd"
 export VSCODE_EXTENSIONS="$XDG_DATA_HOME/vscode/extensions"
 
 # Android
-export ANDROID_HOME="$HOME/Library/Android/sdk"
-export ANDROID_TMP="$XDG_CACHE_HOME/android"
+export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
+#export ANDROID_EMULATOR_HOME="$XDG_DATA_HOME/android"
+#export ANDROID_AVD_HOME="$ANDROID_EMULATOR_HOME/avd"
+
+# b2
+export B2_ACCOUNT_INFO="$XDG_DATA_HOME/b2_account_info"
 
 # pylint
 export PYLINTHOME="$XDG_CACHE_HOME/pylint.d"
