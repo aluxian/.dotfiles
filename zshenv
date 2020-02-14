@@ -32,6 +32,9 @@ export NVM_LAZY_LOAD=true
 export NVM_NO_USE=true
 export NVM_AUTO_USE=true
 
+# httpie
+export HTTPIE_CONFIG_DIR="$XDG_CONFIG_HOME/httpie"
+
 # tmux
 export ZSH_TMUX_CONFIG="$XDG_CONFIG_HOME/tmux/tmux.conf"
 
@@ -57,6 +60,9 @@ export ENHANCD_DIR="$XDG_CACHE_HOME/enhancd"
 # VS Code
 export VSCODE_EXTENSIONS="$XDG_DATA_HOME/vscode/extensions"
 
+# cocoapods
+export CP_HOME_DIR="$XDG_CACHE_HOME/cocoapods"
+
 # Android
 export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
 #export ANDROID_EMULATOR_HOME="$XDG_DATA_HOME/android"
@@ -79,9 +85,9 @@ export RBENV_SHELL="zsh"
 # rubygems
 export GEM_SPEC_CACHE="$XDG_CACHE_HOME/gem"
 
-# Zplugin
-export ZPLG_HOME_DIR="$XDG_DATA_HOME/zplugin"
-export ZPLG_ZCOMPDUMP_PATH="$XDG_CACHE_HOME/zcompdump"
+# Zinit
+export ZINIT_HOME_DIR="$XDG_DATA_HOME/zinit"
+export ZINIT_ZCOMPDUMP_PATH="$XDG_CACHE_HOME/zcompdump"
 
 # pipx
 export PIPX_HOME="$XDG_DATA_HOME/pipx"

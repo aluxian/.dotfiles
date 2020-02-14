@@ -7,88 +7,88 @@ autoload -Uz "$XDG_CONFIG_HOME/zsh/functions/*"
 
 # }}}
 
-# Zplugin init {{{
+# Zinit init {{{
 
-typeset -A ZPLGM
-ZPLGM[HOME_DIR]=$ZPLG_HOME_DIR
-ZPLGM[ZCOMPDUMP_PATH]=$ZPLG_ZCOMPDUMP_PATH
-source "$ZPLG_HOME_DIR/bin/zplugin.zsh"
+typeset -A ZINITM
+ZINITM[HOME_DIR]=$ZINIT_HOME_DIR
+ZINITM[ZCOMPDUMP_PATH]=$ZINIT_ZCOMPDUMP_PATH
+source "$ZINIT_HOME_DIR/bin/zinit.zsh"
 
 # }}}
 
 # Plugins {{{
 
-zplg ice lucid atpull'_clear_cache_archey' atload'_cached_archey'
-zplg light aluxian/archey-zsh
+#zinit ice lucid atpull'_clear_cache_archey' atload'_cached_archey'
+#zinit light aluxian/archey-zsh
 
-zplg ice pick'async.zsh' src'pure.zsh'
-zplg light sindresorhus/pure
+zinit ice pick'async.zsh' src'pure.zsh'
+zinit light sindresorhus/pure
 
-zplg ice lucid
-zplg light onyxraven/zsh-osx-keychain
+zinit ice lucid
+zinit light onyxraven/zsh-osx-keychain
 
-zplg ice lucid
-zplg snippet OMZ::plugins/git/git.plugin.zsh
+zinit ice lucid
+zinit snippet OMZ::plugins/git/git.plugin.zsh
 
-zplg ice wait lucid
-zplg snippet OMZ::plugins/brew/brew.plugin.zsh
+zinit ice wait lucid
+zinit snippet OMZ::plugins/brew/brew.plugin.zsh
 
-zplg ice wait lucid blockf
-zplg snippet OMZ::plugins/fzf/fzf.plugin.zsh
+zinit ice wait lucid blockf
+zinit snippet OMZ::plugins/fzf/fzf.plugin.zsh
 
-zplg ice wait lucid
-zplg snippet OMZ::plugins/gitignore/gitignore.plugin.zsh
+zinit ice wait lucid
+zinit snippet OMZ::plugins/gitignore/gitignore.plugin.zsh
 
-zplg ice wait lucid atload'ZSH_TMUX_FIXTERM=false'
-zplg snippet OMZ::plugins/tmux/tmux.plugin.zsh
+zinit ice wait lucid atload'ZSH_TMUX_FIXTERM=false'
+zinit snippet OMZ::plugins/tmux/tmux.plugin.zsh
 
-zplg ice wait lucid
-zplg snippet OMZ::plugins/dash/dash.plugin.zsh
+zinit ice wait lucid
+zinit snippet OMZ::plugins/dash/dash.plugin.zsh
 
-zplg ice wait lucid
-zplg snippet OMZ::plugins/yarn/yarn.plugin.zsh
+zinit ice wait lucid
+zinit snippet OMZ::plugins/yarn/yarn.plugin.zsh
 
-zplg ice wait lucid
-zplg snippet OMZ::plugins/dotenv/dotenv.plugin.zsh
+zinit ice wait lucid
+zinit snippet OMZ::plugins/dotenv/dotenv.plugin.zsh
 
-zplg ice wait lucid pick'.kubectl_aliases'
-zplg light ahmetb/kubectl-aliases
+zinit ice wait lucid pick'.kubectl_aliases'
+zinit light ahmetb/kubectl-aliases
 
-zplg ice wait lucid
-zplg light b4b4r07/enhancd
+zinit ice wait lucid
+zinit light b4b4r07/enhancd
 
-zplg ice wait lucid
-zplg light DarrinTisdale/zsh-aliases-exa
+zinit ice wait lucid
+zinit light DarrinTisdale/zsh-aliases-exa
 
-zplg ice wait lucid as'program' pick'bin/git-dsf'
-zplg light zdharma/zsh-diff-so-fancy
+zinit ice wait lucid as'program' pick'bin/git-dsf'
+zinit light zdharma/zsh-diff-so-fancy
 
-zplg ice wait lucid as'program' pick'$ZPFX/ddcctl' make'ddcctl PREFIX=$ZPFX'
-zplg light kfix/ddcctl
+zinit ice wait lucid as'program' pick'$ZPFX/ddcctl' make'ddcctl PREFIX=$ZPFX'
+zinit light kfix/ddcctl
 
-zplg ice wait lucid
-zplg light lukechilds/zsh-nvm
+zinit ice wait lucid
+zinit light lukechilds/zsh-nvm
 
-zplg ice wait lucid blockf
-zplg light zsh-users/zsh-completions
+zinit ice wait lucid blockf
+zinit light zsh-users/zsh-completions
 
-zplg ice wait lucid
-zplg light zsh-users/zsh-autosuggestions
+zinit ice wait lucid
+zinit light zsh-users/zsh-autosuggestions
 
-zplg ice wait lucid
-zplg light mollifier/cd-gitroot
+zinit ice wait lucid
+zinit light mollifier/cd-gitroot
 
-zplg ice wait lucid from'gh-r' as'program' mv'uni* -> uni' pick'uni'
-zplg light arp242/uni
+zinit ice wait lucid from'gh-r' as'program' mv'uni* -> uni' pick'uni'
+zinit light arp242/uni
 
-zplg ice wait lucid from'gh-r' as'program' mv'dbxcli* -> dbxcli' pick'dbxcli'
-zplg light dropbox/dbxcli
+zinit ice wait lucid from'gh-r' as'program' mv'dbxcli* -> dbxcli' pick'dbxcli'
+zinit light dropbox/dbxcli
 
-zplg ice wait lucid atinit'zpcompinit; zpcdreplay'
-zplg light zdharma/fast-syntax-highlighting
+zinit ice wait lucid atinit'zpcompinit; zpcdreplay'
+zinit light zdharma/fast-syntax-highlighting
 
-zplg ice wait lucid blockf pick'manydots-magic'
-zplg light knu/zsh-manydots-magic
+zinit ice wait lucid blockf pick'manydots-magic'
+zinit light knu/zsh-manydots-magic
 
 # }}}
 
