@@ -118,6 +118,10 @@ setopt histignorespace
 # allow use of comments in interactive code
 setopt interactivecomments
 
+# zsh-syntax-highlighting
+typeset -A ZSH_HIGHLIGHT_STYLES
+ZSH_HIGHLIGHT_STYLES[comment]='fg=yellow,bg=yellow'
+
 # }}}
 
 # Aliases {{{

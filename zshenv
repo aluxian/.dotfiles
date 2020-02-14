@@ -65,8 +65,8 @@ export CP_HOME_DIR="$XDG_CACHE_HOME/cocoapods"
 
 # Android
 export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
-#export ANDROID_EMULATOR_HOME="$XDG_DATA_HOME/android"
-#export ANDROID_AVD_HOME="$ANDROID_EMULATOR_HOME/avd"
+export ANDROID_EMULATOR_HOME="$XDG_DATA_HOME/android"
+export ANDROID_AVD_HOME="$ANDROID_EMULATOR_HOME/avd"
 
 # b2
 export B2_ACCOUNT_INFO="$XDG_DATA_HOME/b2_account_info"
