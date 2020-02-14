@@ -16,3 +16,9 @@ export GPG_TTY=`tty`
 
 # cloudconvert-cli
 export CLOUDCONVERT_API_KEY=$(keychain-environment-variable CLOUDCONVERT_API_KEY)
+
+# rclone
+export RCLONE_CONFIG_PASS=$(keychain-environment-variable RCLONE_CONFIG_PASS)
+
+# hub, gist
+export GITHUB_TOKEN=$(keychain-environment-variable GITHUB_TOKEN)

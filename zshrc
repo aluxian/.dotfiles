@@ -3,7 +3,7 @@
 # load functions {{{
 
 fpath=("$XDG_CONFIG_HOME/zsh/functions" $fpath)
-autoload -Uz "$XDG_CONFIG_HOME/zsh/functions/*"
+autoload -Uz $XDG_CONFIG_HOME/zsh/functions/*
 
 # }}}
 
@@ -48,8 +48,11 @@ zinit snippet OMZ::plugins/dash/dash.plugin.zsh
 zinit ice wait lucid
 zinit snippet OMZ::plugins/yarn/yarn.plugin.zsh
 
-zinit ice wait lucid
-zinit snippet OMZ::plugins/dotenv/dotenv.plugin.zsh
+zplg ice wait lucid
+zplg snippet OMZ::plugins/npm/npm.plugin.zsh
+
+zplg ice wait lucid
+zplg snippet OMZ::plugins/dotenv/dotenv.plugin.zsh
 
 zinit ice wait lucid pick'.kubectl_aliases'
 zinit light ahmetb/kubectl-aliases
