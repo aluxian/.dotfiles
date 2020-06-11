@@ -1,4 +1,0 @@
-# vim:fileencoding=utf-8:ft=zsh:foldmethod=marker
-
-mkdir -p $ZINIT_HOME_DIR
-git clone https://github.com/zdharma/zinit.git $ZINIT_HOME_DIR/bin
